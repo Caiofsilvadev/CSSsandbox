@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form styling</title>
+  <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+  <style>
+
+    * {
+
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+
+    }
+  
+    
+    body {
+
+        background-color: #344a72;
+        font-family: 'Raleway', sans-serif;
+        line-height: 2.8em;
+        height: 700px;
+    }
+
+    .container {
+
+        background-color: #fff;
+        color: #333;
+        margin: 30px auto;
+        padding: 20px 30px;
+        height: 600px;
+        max-width: 400px;
+        max-height: 700px;
+        
+    }
+    
+    h1 {
+        
+        text-align: center;
+        color: #333;
+
+       
+    }
+    
+    p {
+
+        text-align: center;
+        color: #333;
+       
+    }
+
+
+    label {
+        
+        display: block;
+        line-height: 1.8em;
+    }
+
+    input {
+
+        display: block;
+        width: 100%;
+        padding: 5px 0px;
+        margin-bottom: 5px;
+        border: 1px #ddd solid;
+        border-radius: 5px;
+
+    }
+
+
+    #button {
+
+       
+        background-color: #49c1a2;
+        padding: 5px 0px;
+        margin: 20px auto;
+
+        text-decoration: none;
+        color:#fff;
+        font-weight: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+
+    }
+
+    #button:hover{
+
+        width: 33%;
+        margin: 20px auto;
+        border: 2px green solid;
+        background-color: #37a08e;
+        padding: 5px 20px;
+        color: #fff;
+    }
+
+  
+    .footer-description {
+
+        font-size: 0.8em;
+    }
+
+    footer p {
+
+        color: #fff;
+        font-size: 1.1em;
+               
+    }
+
+    footer a {
+        
+        color: green;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+
+        color: #fff;
+        background-color:green
+        
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+
+    <div class="container">
+    <h1>Sign Up</h1>
+    <p>It's free and only takes a minute</p>
+
+    <form>
+
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <label for="cpassword">Confirm password</label>
+        <input type="password" name="cpassword" id="cpassword">
+        <input type="button" name="button" id="button" value="Sign Up">
+       
+    </form>
+
+    <div class="footer-description">
+
+        <p>By cliking the Sign Up button, you agree to your</p> 
+        <p> <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
+
+    </div>
+
+    </div>
+
+    <footer>
+        
+        <p>Already have an account?<a href="#">Login Here</a></p>
+
+    </footer>
+       
+        
+   
+
+
+  
+</body>
+</html>

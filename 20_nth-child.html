@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>nth-child</title>
+    <style>
+      li {
+        padding: 0.25rem;
+        margin: 0.25rem;
+        list-style: none;
+      }
+
+      /*first-child*/
+      /*o pseudo seletor first child aplica a estilização ao primeiro item de uma lista de elemento, não se aplica somente 
+      a listas propriamente ditas, qualquer elemento ordenado, como uma lista de divs ou de imgs também funciona da mesma
+      forma*/
+      li:first-child{
+        background:red ;
+      }
+
+      /*Last Child*/
+      /*O pseudo seletor last child aplica a estilização ao ultimo elemento de uma lista de elementos, não necessariamente
+      uma lista, em uma sequencia de div ou imgs ocorrerá o mesmo efeito*/
+      li:last-child{
+        background: green;
+      }
+
+      /*Position*/
+      /*O pesudo seletor nth-child('position') permite estilizar qualquer item de uma lista ao colocar o numero correspondente
+      a ordem do item desejado no nome position*/
+      li:nth-child(2){
+        background: purple;
+      }
+
+      /*Every 3*/
+      /*O pseudo seletor nth-child('Xn') permite estilizar em intervalos de X elementos, por padrão o primeiro elemento
+      é X e partir dele conta-se de X em X elementos*/
+      li:nth-child(3n){
+        background: orange;
+      }
+
+      /*Every 3 after 7*/
+      /*O pseudo seletor nth-child('Xn + Y') permite estilizar em intervalos de X elementos começando do elemento Y*/
+      li:nth-child(3n + 7){
+        background: yellow;
+      }
+
+      /*Every odd*/
+      /*O pseudo seletor nth-child(odd) permite aplicar estilização a todos os elementos impares de uma lista de 
+      elementos*/
+      li:nth-child(odd){
+        background: grey;
+      }
+
+      /*Every even*/
+      /*O pseudo seletor nth-child(even) aplica a estilização a todosos elementos de uma lista de elementos*/
+
+
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+      <li>Item 15</li>
+      <li>Item 16</li>
+      <li>Item 17</li>
+      <li>Item 18</li>
+      <li>Item 19</li>
+      <li>Item 20</li>
+      <li>Item 21</li>
+      <li>Item 22</li>
+    </ul>
+  </body>
+</html>

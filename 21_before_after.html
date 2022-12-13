@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>before & after</title>
+    <style>
+      body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: #333;
+        color: #fff;
+      }
+
+      /* o Pseudo seletor element: after ou element:before permite inserir uma estilização antes ou depois do element
+      , com essa estilização é possivel inserir conteudo atraves do CSS, o '*' inserido no exemplo abaixo e um conteudo
+      que está fora da marcação do HTML, ou seja, foi inserido e esta sendo estilizado dentro do css e esta "depois" da 
+      class .is-required*/
+      .is-required:after{
+        content: '*';
+        color: red;
+        padding-left: 2px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      header:before{
+        content: '';/*Não sera inserido nenhum conteudo, portanto conteudo vazio*/
+        background: url(/img/resource-database-xBeCnYZ4ebY-unsplash.jpg) no-repeat center center/cover;
+        opacity: 0.3;
+        /*Para que a imagem de fundo conincida oom o background, para forma uma sobreposição
+        é preciso estilizar conforme abaixo*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*Essa estilização faz com que o background que está before do header principal preencha
+        todo os espaço do header*/
+        height: 100%;
+        width: 100%;
+        /*A estilização a seguir se faz necessaria por que todo o conteudo do header sofre o efeito da
+        opacity, dessa forma com z-index: -1, o conteudo do header "salta" para frente da sopreposição*/
+        z-index: -1;
+      }
+
+      header h1 {
+        font-size: 6rem;
+        margin: 1rem;
+      }
+
+    </style>
+  </head>
+  <body>
+       <!-- <label class="is-required" for="name">Name</label> 
+        <input type="text" />-->
+    <header>
+      <h1>Hello World</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, hic!
+      </p>
+    </header>
+
+    <section>
+      <h3>Lorem, ipsum dolor.</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+        suscipit quidem illum commodi alias nesciunt ipsam eligendi quo expedita
+        est?
+      </p>
+    </section>
+  </body>
+</html>

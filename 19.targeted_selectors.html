@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Targeted Selectors</title>
+  <style>
+
+   /* div p{
+      background: #ddd;
+    }*/
+
+    /*Direct Child*/
+    /*Somente os filhos diretos de uma div recebem a estilização*/
+    div>p{
+      background: #ddd;
+    }
+
+    /*Directly after*/
+    /*Apenas o membro imediatmente depois da div recebe a estilização*/
+    div+p{
+      background: #333;
+      color: #fff;
+    }
+
+    /*By Attribute*/
+    /*Apenas o elemento com o atributo entre [] recebe a estilização*/
+    a[target]{ /* Essa estilização sera aplicada a todos os elementos com attribute target*/
+      background: #ff0000;
+      color: #fff;
+    }
+
+    a[target="_self"]{ /*A estilização será aplicada a todos os elementos que tiverem attribute target com value 
+                        _self*/
+      background: green;
+      color: #fff;
+    }
+
+    /*Specific Attribute values*/
+    /*Apenas elementos com o attribute e o value especificado entre [] recebe a estilização.*/
+    input[type='text'], input[type='email']{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      
+      <ul>
+        <li>item  1</li>
+        <li><p>item 2</p></li><!--O item 2 não recebe estilização no caso direct child por que ele é
+                                  filho direto de li, não da div-->
+        <li>item  3</li>
+      </ul>
+      
+      <p>Lorem ipsum dolor sit amet.</p>
+      
+    </div>
+    
+    
+      <p>Lorem ipsum dolor sit amet.</p><!--Apenas esse paragrafo recebe directity after pois é imediatamnete apos a div-->
+
+      <a href="#">page 1</a>
+      <a href="#" target="_self">page 2</a>
+      <a href="#" target="_blank">Google</a>
+
+      <br><br>
+
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" placeholder="Submit">
+      </form>
+  
+</body>
+</html>

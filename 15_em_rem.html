@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em & Rem Units</title>
+  <style>
+    #box-1 {
+      font-size: 20px;
+    }
+
+    #box-1 p {
+      font-size: 1.5em;
+      padding: 1em;
+    }
+
+    #box-1 ul {
+      font-size: 1.2em;
+    }
+
+    #box-2 h3{
+      font-size:2rem;
+    }
+
+    #box-2 p{
+      font-size:1.6rem;
+      line-height:1.7rem;
+    }
+
+    /*para alterar o tamanho do elemento raiz executa-se o seguinte comando*/
+    html{
+      font-size: 10px; /*o elemento raiz é definido na tag html*/
+      /*font-size: 62.5%;*/
+      /*Ao colocar font-size como 62.5% a correpondencia entre rem unit e o pixel se torna exata
+      ou seja 1.6 rem = 16 px, quando o elemento raiz possui 62,5% do tamanho original de 16px*/
+    }
+
+  </style>
+</head>
+<body>
+   <div id="box-1">
+      
+      <h3>Box One</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam corrupti commodi, necessitatibus ab fuga! Aut id animi porro iure, explicabo nostrum rem architecto. Nisi voluptatem dicta, ratione sint praesentium consectetur veritatis magnam dolore perspiciatis aut cum ipsa laborum doloremque excepturi. Recusandae officia qui, pariatur est incidunt soluta sapiente optio!</p>
+      <ul>
+        <li>1</li>
+        <li>
+          <ul>1</ul>
+          <ul>
+            <ul>1</ul>
+            <ul>2</ul>
+            <ul>3</ul>
+          </ul>
+          <ul>3</ul>
+        </li>
+        <li>3</li>
+      </ul>
+   </div>
+   <div id="box-2">
+      
+    <h3>Box Two</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam corrupti commodi, necessitatibus ab fuga! Aut id animi porro iure, explicabo nostrum rem architecto. Nisi voluptatem dicta, ratione sint praesentium consectetur veritatis magnam dolore perspiciatis aut cum ipsa laborum doloremque excepturi. Recusandae officia qui, pariatur est incidunt soluta sapiente optio!</p>
+
+   </div>
+  
+</body>
+</html>
